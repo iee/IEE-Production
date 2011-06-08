@@ -6,6 +6,7 @@
       <editor
             class="com.github.iee.view.TestEditor"
             default="false"
+            icon="icons/IEE.png"
             id="IEE-Production.editor1"
             name="TestEditor">
       </editor>
