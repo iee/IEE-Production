@@ -3,8 +3,10 @@ Bundle-ManifestVersion: 2
 Bundle-Name: IEE_Production
 Bundle-SymbolicName: IEE_Production
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: iee_production.Activator
+Bundle-Activator: com.github.iee.view.Activator
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime
+ org.eclipse.core.runtime,
+ org.eclipse.jface.text;bundle-version="3.5.2",
+ org.eclipse.ui.editors;bundle-version="3.5.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
