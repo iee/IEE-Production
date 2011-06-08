@@ -10,15 +10,15 @@ import org.eclipse.ui.editors.text.TextEditor;
 
 import com.github.iee.container.ContainerManager;
 
-public class TestView extends TextEditor {
+public class TestEditor extends TextEditor {
 
-	public static final String ID = "Test.view";
+	public static final String ID = "Test.editor";
 
 	private ProjectionViewer fProjectionViewer;
 	private ProjectionAnnotationModel fProjectionAnnotationModel;
     private ProjectionSupport fProjectionSupport;
 
-    public TestView() {
+    public TestEditor() {
     	super();
     }
 

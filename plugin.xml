@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.github.iee.view.TestEditor"
+            default="false"
+            id="IEE-Production.editor1"
+            name="TestEditor">
+      </editor>
+   </extension>
+
+</plugin>
