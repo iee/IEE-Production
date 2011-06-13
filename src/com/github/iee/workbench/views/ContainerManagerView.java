@@ -1,7 +1,6 @@
-package com.github.iee.workbench.view;
+package com.github.iee.workbench.views;
 
 import java.util.ArrayList;
-
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.jface.viewers.IStructuredContentProvider;
 import org.eclipse.jface.viewers.ITreeContentProvider;
@@ -16,12 +15,12 @@ import org.eclipse.ui.ISharedImages;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.ViewPart;
 
-public class PadManagerView extends ViewPart {
+public class ContainerManagerView extends ViewPart {
 
 	/**
 	 * The ID of the view as specified by the extension.
 	 */
-	public static final String ID = "IEE-Production.pad_view";
+	public static final String ID = "IEE-Production.container_view";
 	private TreeViewer treeViewer;
 
 	class TreeObject implements IAdaptable {
@@ -141,7 +140,7 @@ public class PadManagerView extends ViewPart {
 //			root.addChild(p1);
 //			root.addChild(p2);
 
-			invisibleRoot = new TreeParent("Pads");
+			invisibleRoot = new TreeParent("Containers");
 			//invisibleRoot.addChild(root);
 		}
 	}
@@ -167,7 +166,7 @@ public class PadManagerView extends ViewPart {
 	/**
 	 * The constructor.
 	 */
-	public PadManagerView() {
+	public ContainerManagerView() {
 	}
 
 	@Override

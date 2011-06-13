@@ -20,7 +20,7 @@
       <view
             allowMultiple="false"
             category="IEE-Production.iee_category"
-            class="com.github.iee.workbench.view.ContainerManagerView"
+            class="com.github.iee.workbench.views.ContainerManagerView"
             icon="icons/IEE.png"
             id="IEE-Production.container_view"
             name="ContainerManagerView"
@@ -29,12 +29,57 @@
       <view
             allowMultiple="false"
             category="IEE-Production.iee_category"
-            class="com.github.iee.workbench.view.PadManagerView"
+            class="com.github.iee.workbench.views.PadManagerView"
             icon="icons/IEE.png"
             id="IEE-Production.pad_view"
             name="PadManagerView"
             restorable="true">
       </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <viewerContribution
+            id="IEE-Production.InsertPadContribution"
+            targetID="#CompilationUnitEditorContext">
+         <action
+               class="com.github.iee.workbench.actionDelegates.InsertPadActionDelegate"
+               id="IEE-Production.insertPad"
+               label="Insert Pad"
+               menubarPath="additions">
+         </action>
+      </viewerContribution>
+   </extension>n>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <viewerContribution
+            id="IEE-Production.InsertPadContribution"
+            targetID="IEE-Production.InsertPadContrib">
+         <action
+               class="com.github.iee.workbench.actionDelegates.InsertPadActionDelegate"
+               id="IEE-Production.insertPad"
+               label="Insert Pad"
+               menubarPath="additions">
+         </action>
+      </viewerContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <viewerContribution
+            id="IEE-Production.InsertPadContribution"
+            targetID="IEE-Production.InsertPadContrib">
+         <action
+               class="action.Action1"
+               id="IEE-Production.insertPad"
+               label="Insert Pad">
+         </action>
+      </viewerContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <viewerContribution
+            id="IEE-Production.InsertPadContribution"
+            targetID="IEE-Production.InsertPad">
+      </viewerContribution>
    </extension>
 
 </plugin>
