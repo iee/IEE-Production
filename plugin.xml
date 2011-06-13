@@ -11,5 +11,27 @@
             name="TestEditor">
       </editor>
    </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="IEE-Production.iee_category"
+            name="IEE">
+      </category>
+      <view
+            allowMultiple="false"
+            class="com.github.iee.workbench.view.ContainerManagerView"
+            icon="icons/IEE.png"
+            id="IEE-Production.container_view"
+            name="ContainerManagerView"
+            restorable="true">
+      </view>
+      <view
+            class="com.github.iee.workbench.view.PadManagerView"
+            icon="icons/IEE.png"
+            id="IEE-Production.pad_view"
+            name="PadManagerView"
+            restorable="true">
+      </view>
+   </extension>
 
 </plugin>
