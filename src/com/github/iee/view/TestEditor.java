@@ -16,55 +16,63 @@ public class TestEditor extends TextEditor {
 
 	private ProjectionViewer fProjectionViewer;
 	private ProjectionAnnotationModel fProjectionAnnotationModel;
-    private ProjectionSupport fProjectionSupport;
+	private ProjectionSupport fProjectionSupport;
 
-    public TestEditor() {
-    	super();
-    }
+	public TestEditor() {
+		super();
+	}
 
-    @Override
+	@Override
 	public void createPartControl(Composite parent) {
-    	super.createPartControl(parent);
+		super.createPartControl(parent);
 
-    	ProjectionViewer viewer = (ProjectionViewer) getSourceViewer();
+		ProjectionViewer viewer = (ProjectionViewer) getSourceViewer();
 
-    	fProjectionSupport = new ProjectionSupport(viewer, getAnnotationAccess(), getSharedColors());
-    	fProjectionSupport.install();
+		fProjectionSupport = new ProjectionSupport(viewer,
+				getAnnotationAccess(), getSharedColors());
+		fProjectionSupport.install();
 
 		viewer.doOperation(ProjectionViewer.TOGGLE);
 
 		fProjectionAnnotationModel = viewer.getProjectionAnnotationModel();
 
-    	new ContainerManager(viewer.getDocument(), fProjectionAnnotationModel);
+		ContainerManager fContainerManager = new ContainerManager(viewer
+				.getDocument(), fProjectionAnnotationModel);
 
-//		fPadsTreeViewer = new TreeViewer(parent);
-//		fPadsTreeViewer.setLabelProvider(new LabelProvider());
-//		fPadsTreeViewer.setContentProvider(new TreeViewerContentProvider());
-//		fPadsTreeViewer.setInput(fContainerManager);
+		// fPadsTreeViewer = new TreeViewer(parent);
+		// fPadsTreeViewer.setLabelProvider(new LabelProvider());
+		// fPadsTreeViewer.setContentProvider(new TreeViewerContentProvider());
+		// fPadsTreeViewer.setInput(fContainerManager);
 
-//		fCheckTreeViewer = new TreeViewer(parent);
-//		fCheckTreeViewer.setLabelProvider(new LabelProvider());
-//		fCheckTreeViewer.setContentProvider(new TreeViewerContentProviderCheck());
-//		fCheckTreeViewer.setInput(fContainerManager);
+		// fCheckTreeViewer = new TreeViewer(parent);
+		// fCheckTreeViewer.setLabelProvider(new LabelProvider());
+		// fCheckTreeViewer.setContentProvider(new
+		// TreeViewerContentProviderCheck());
+		// fCheckTreeViewer.setInput(fContainerManager);
 
-//		fContainerManager.addStateChangedListener(new IContainerManagerListener() {
-//			@Override
-//			public void embeddedRangeSetChanged(EmbeddedRangeSetChangedEvent event) {
-//				fPadsTreeViewer.refresh();
-//				fCheckTreeViewer.refresh();
-//			}
-//		});
+		// fContainerManager.addStateChangedListener(new
+		// IContainerManagerListener() {
+		// @Override
+		// public void embeddedRangeSetChanged(EmbeddedRangeSetChangedEvent
+		// event) {
+		// fPadsTreeViewer.refresh();
+		// fCheckTreeViewer.refresh();
+		// }
+		// });
 	}
+
 	@Override
 	public void setFocus() {
 		fProjectionViewer.getControl().setFocus();
 	}
 
-    @Override
-	protected ISourceViewer createSourceViewer(Composite parent, IVerticalRuler ruler, int styles) {
-    	fProjectionViewer = new ProjectionViewer(parent, ruler, getOverviewRuler(), isOverviewRulerVisible(), styles);
-    	getSourceViewerDecorationSupport(fProjectionViewer);
+	@Override
+	protected ISourceViewer createSourceViewer(Composite parent,
+			IVerticalRuler ruler, int styles) {
+		fProjectionViewer = new ProjectionViewer(parent, ruler,
+				getOverviewRuler(), isOverviewRulerVisible(), styles);
+		getSourceViewerDecorationSupport(fProjectionViewer);
 
-    	return fProjectionViewer;
-    }
+		return fProjectionViewer;
+	}
 }

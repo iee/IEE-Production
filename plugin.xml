@@ -19,6 +19,7 @@
       </category>
       <view
             allowMultiple="false"
+            category="IEE-Production.iee_category"
             class="com.github.iee.workbench.view.ContainerManagerView"
             icon="icons/IEE.png"
             id="IEE-Production.container_view"
@@ -26,6 +27,8 @@
             restorable="true">
       </view>
       <view
+            allowMultiple="false"
+            category="IEE-Production.iee_category"
             class="com.github.iee.workbench.view.PadManagerView"
             icon="icons/IEE.png"
             id="IEE-Production.pad_view"
