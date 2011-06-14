@@ -48,38 +48,19 @@
                menubarPath="additions">
          </action>
       </viewerContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="IEE-Production.iee_wizard"
+            name="IEE">
+      </category>
+      <wizard
+            category="IEE-Production.iee_wizard"
+            class="com.github.iee.workbench.wizards.AddPadWizard"
+            id="IEE-Production.AddPadWizard"
+            name="Add Pad">
+      </wizard>
    </extension>n>
-   <extension
-         point="org.eclipse.ui.popupMenus">
-      <viewerContribution
-            id="IEE-Production.InsertPadContribution"
-            targetID="IEE-Production.InsertPadContrib">
-         <action
-               class="com.github.iee.workbench.actionDelegates.InsertPadActionDelegate"
-               id="IEE-Production.insertPad"
-               label="Insert Pad"
-               menubarPath="additions">
-         </action>
-      </viewerContribution>
-   </extension>
-   <extension
-         point="org.eclipse.ui.popupMenus">
-      <viewerContribution
-            id="IEE-Production.InsertPadContribution"
-            targetID="IEE-Production.InsertPadContrib">
-         <action
-               class="action.Action1"
-               id="IEE-Production.insertPad"
-               label="Insert Pad">
-         </action>
-      </viewerContribution>
-   </extension>
-   <extension
-         point="org.eclipse.ui.popupMenus">
-      <viewerContribution
-            id="IEE-Production.InsertPadContribution"
-            targetID="IEE-Production.InsertPad">
-      </viewerContribution>
-   </extension>
 
 </plugin>
